@@ -22,8 +22,12 @@ namespace BitcoinApi.Database
     {
         protected override void Seed(BitcoinApiContext context)
         {
-            const string username = "isazero";
-            const string password = "isa980822";
+            //Your username
+            const string username = "";
+            //Your password
+            const string password = "";
+
+            //hashing function
             var salt = new byte[16];
             new RNGCryptoServiceProvider().GetBytes(salt);
             var passwordRfc2898DeriveBytes = new Rfc2898DeriveBytes(password, salt, 10000);
